@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(57, 55, 55);
+  color:#fff;
+ 
+}
+
+
+
+
+.preview-card-banner {
+  width: 100%
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.preview-details {
+  font-size: 13px;
+  padding: .5em;
+}
+
+
+h3,
+p,
+h2 {
+  margin: 0px;
+}
+
+.country-name {
+  font-weight: 500;
+  padding-left: .5em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: .5em;
+  box-shadow: 1px 15px 20px -11px rgba(0, 0, 0, 0.2);
+  background-color:rgb(28, 27, 27);;
+  color:#fff;
+}
+
+
+.search button,input {
+  padding:.6em;
+  background-color:#fff;
+  box-shadow:1px 15px 20px -11px rgba(0, 0, 0, 0.2) ;
+  outline-color: #fff;
+}
+
+.search button {
+  border-right:none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 1px 15px 20px -11px rgba(0, 0, 0, 0.2);
+}
+.search input {
+  border-left: none;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.filter {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}
+
+.filter-search{
+  padding:1em;
+  display:flex;
+  justify-content: space-between;
+  background-color: rgb(33, 32, 32);
+}
+.filter-search select {
+  background-color: inherit;
+  box-shadow: 1px 15px 20px -11px rgba(0, 0, 0, 0.2);
+  color:#fff;
+  border-radius: 5px;
+}
+
+.filter option,select {
+  padding:.5em;
+  background-color: rgb(63, 63, 63);
+}
+.search input:focus {
+  outline: none;
+}
+
+.country-details {
+  margin-top: 50px;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details p {
+  margin:.5em;
+}
+
+.borders {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5em;
+  margin-top: 5em;
+  justify-content: space-evenly;
+}
+.borders-section {
+   margin-left: 5em;
+   margin-top:5em;
+
+}
+.total {
+  font-size:12px;
+}
+.header-filter {
+  position:sticky;
+  top:0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.loading{
+  margin-left:auto;
+  margin-right: auto;
+  color:#fff;
+}
+
+.country-cards {
+  padding-top: 1.5em;
+}
+
+.preview-card {
+  width:75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  background-color: rgb(38, 37, 37);;
+  box-shadow: -7px 5px 68px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.back-buttton {
+  border-radius: 5px;
+  padding:0.5em 1em;
+  background-color: #fff;
+  color: #000;
+  margin-top:10px
+}
+.link-home{
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (min-width:800px) {
+
+  .preview-card {
+    width: 18%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .preview-card-banner {
+    width: 100%;
+  }
+
+  .country-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5em;
+  }
+
+ 
+
+  .country-details {
+    display: flex;
+    flex-wrap: wrap;
+    padding:1em;
+    justify-content: center;
+   
+  }
+
+  .flag {
+    width:45%
+  }
+  .coutry-details-dec{
+      width:45%;
+  }
+  .details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+
+@media screen and (max-width:320px){
+  .search > button {
+    display: none;
+  }
+}

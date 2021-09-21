@@ -1,0 +1,50 @@
+--Ecommerce-WordPress-Like-App
+
+--This App has 2 user type - Buyer
+                           - Shop
+                           - Viewer
+
+--This App targets small business that wish to have an lively ecommerce app 
+  to rum thier business online but have not been a able to so due to some reasons.
+  (reasons:)
+
+--Upon creating an account,based on the account type:
+      if account_type === Buyer?
+          create a normal user role account;
+    if account_type === 'shop'?
+         ask for some proves,credential ,certs,others to valid if it a valid shop;
+         create a Shop(Space) for this account.
+
+--Viewer: - Can only view a particular shop and the products available;
+          -  Can view all products;
+        
+--Buyer - Has all the privilages of a Viewer;
+        - Can order from a particular shop;
+        - Can  buy from a shop;
+        - Can  make a secure online payment(MOMO <All network>)
+        - Can Upgrade account to a shop account.
+
+--Shop - Can own a shop -Post available products for the shop
+                        -Receive payment on the shop;
+                        -Has the privilages of a Buyer;
+                        -Can downgrade account to a Buyer;
+                        -Receive order from buyers;
+                        
+
+
+                        Basic Functionality
+                        --General--
+        0.View Shops/Products
+        1.Sign Up
+        2.Login
+        3.Select a shop to got in to that space.
+        4.Filter Products by Shops,items types,name,etc.
+        5.Make a search for a products based on some paramters(Eg.shop name,price).
+        6.Make Payment.
+         
+                        ---Shop---
+        0.Get a simply and flexible space to operate like an online store.
+        1.receive payment and be able to withdraw.
+        2.
+
+          
