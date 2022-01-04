@@ -126,8 +126,8 @@ h2 {
 .borders {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 5em;
-  margin-top: 5em;
+  margin-left: 2em;
+  margin-top: 2em;
   justify-content: space-evenly;
 }
 .borders-section {
@@ -204,7 +204,7 @@ h2 {
     flex-wrap: wrap;
     padding:1em;
     justify-content: center;
-   
+    align-items: center;
   }
 
   .flag {

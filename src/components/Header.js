@@ -17,7 +17,7 @@ const Header = (props) => {
     }
     return (
         <div className="header">
-            <h2 className="header-title">Where in the world?</h2>
+            <h2 className="header-title">Where To Go ?</h2>
             <div className="mode">
                 {/* <p>{darkMode?<span class="fa-solid fa-moon" onClick={handleBright}>light</span> : <span class="fa-solid fa-moon" onClick={handleDark}>Dark</span>}</p> */}
             </div>

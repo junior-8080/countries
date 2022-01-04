@@ -12,7 +12,7 @@ const Filter = (props) => {
         handleFilter(event.target.value)
     }
     const handleSearch =  (event) => {
-         handleFilter(`name/${event.target.value}`)
+         event.target.value ? handleFilter(`name/${event.target.value}`) : event.target.value
     }
     
     return (

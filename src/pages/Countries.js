@@ -5,13 +5,15 @@ import Filter from '../components/Filter';
 import Header from "../components/Header"
 
 const Countries = () => {   
-    const [countries,setCounntries] = useState([]);
+    const [countries,setCountries] = useState([]);
     const [region,setRegion] = useState('all')
     const [total,setTotal] = useState(0);
+    const [loading,setLoading] = useState(false)
    
 
     const handleFilter = (value) => {
         if(value === ''){
+            console.log(value)
             setRegion('all')
         }else {
             setRegion(value)
@@ -20,14 +22,20 @@ const Countries = () => {
     }
       
     useEffect(() => {
-        fetch(`https://restcountries.eu/rest/v2/${region}`).then(res  => res.json())
+        setLoading(true)
+        fetch(`https://restcountries.com/v3.1/${region}`)
+        .then(res  => res.json())
         .then(result => {
-            setCounntries(result)
-            setTotal(result.length)
-        }).catch(err => {
-            if(err.status === 404){
-                alert('result not found')
+            setLoading(false)
+            if(result.status === 404){
+                setCountries([])
+                setTotal(0)
+            }else {
+                setCountries(result)
+                setTotal(result.length)
             }
+
+        }).catch(err => {
         })
 
     }, [region]);
@@ -35,11 +43,12 @@ const Countries = () => {
 
     const data = countries.map((item) => {
         const details = {
-            flag:item.flag,
-            name:item.name,
+            flag:item.flags.png,
+            name:item.name.common,
             population:item.population,
             region:item.region,
-            capitalCity:item.capital
+            capitalCity:item.capital ? item.capital : 'N/A',
+            flagIcon: item.flag
         }
         return <CountryPreviewCard  details={details} />
     })
@@ -52,8 +61,12 @@ const Countries = () => {
              </div>
               <div className="country-cards">
               {
-                !countries || countries.length === 0 ?<h2 className="loading">Loading....</h2>: data
+                 !loading && countries.length < 1 ?<h2 className="loading">Not Found</h2>: ''
               }
+              {
+                  loading ? <h2 className="loading">loading...</h2>: data
+              }
+ 
               </div>
         </div>
     )

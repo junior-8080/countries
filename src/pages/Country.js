@@ -12,7 +12,7 @@ const Country = (props) => {
     
 
     useEffect(() => {
-       fetch((`https://restcountries.eu/rest/v2/name/${name}`)).then(res => res.json())
+       fetch((`https://restcountries.com/v3.1/name/${name}`)).then(res => res.json())
        .then(result => {
            setCountry(result[0])
 
@@ -23,7 +23,7 @@ const Country = (props) => {
         <div>
             <Header />
             <BackButton />
-           {country?<CountryDetails country={country}/>:<div className="loading"><h2>Loading.....</h2></div>} 
+           {country ? <CountryDetails country={country}/>:<div className="country-cards" ><h2 className="loading">Loading.....</h2></div>} 
         </div>
     );
 }
