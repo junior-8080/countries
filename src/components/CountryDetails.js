@@ -29,7 +29,7 @@ const CountryDetails = (props) => {
                     <p><strong>Sub-Region:</strong>&nbsp;{country.subregion}</p>
                 </div>
                 <div>
-                    <p><strong>Currencies:</strong>&nbsp;{Object.keys(country.currencies).map((item) => country.currencies[item].name + `(${country.currencies[item].symbol}),`)}</p>
+                    <p><strong>Currencies:</strong>&nbsp;{country.currencies ? Object.keys(country.currencies).map((item) => country.currencies[item].name + `(${country.currencies[item].symbol}),`) : 'N/A'}</p>
                     <p><strong>Languages:</strong>&nbsp;
                     {
                         Object.keys(country.languages).map((lang) => (
